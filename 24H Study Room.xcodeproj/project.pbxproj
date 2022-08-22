@@ -8,17 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		A5E33B5428B3C1BD0012A2FA /* _4H_Study_RoomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E33B5328B3C1BD0012A2FA /* _4H_Study_RoomApp.swift */; };
-		A5E33B5628B3C1BD0012A2FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E33B5528B3C1BD0012A2FA /* ContentView.swift */; };
+		A5E33B5628B3C1BD0012A2FA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E33B5528B3C1BD0012A2FA /* RootView.swift */; };
 		A5E33B5828B3C1BF0012A2FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5E33B5728B3C1BF0012A2FA /* Assets.xcassets */; };
 		A5E33B5B28B3C1BF0012A2FA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5E33B5A28B3C1BF0012A2FA /* Preview Assets.xcassets */; };
+		A5E33B6428B3C4210012A2FA /* Classroom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E33B6328B3C4210012A2FA /* Classroom.swift */; };
+		A5E33B6628B3C54C0012A2FA /* Classrooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E33B6528B3C54C0012A2FA /* Classrooms.swift */; };
+		A5E33B6828B3C6360012A2FA /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E33B6728B3C6360012A2FA /* Profile.swift */; };
+		A5E33B6A28B3C78E0012A2FA /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E33B6928B3C78E0012A2FA /* Friends.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A5E33B5028B3C1BD0012A2FA /* 24H Study Room.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "24H Study Room.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E33B5328B3C1BD0012A2FA /* _4H_Study_RoomApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _4H_Study_RoomApp.swift; sourceTree = "<group>"; };
-		A5E33B5528B3C1BD0012A2FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A5E33B5528B3C1BD0012A2FA /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		A5E33B5728B3C1BF0012A2FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5E33B5A28B3C1BF0012A2FA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A5E33B6328B3C4210012A2FA /* Classroom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classroom.swift; sourceTree = "<group>"; };
+		A5E33B6528B3C54C0012A2FA /* Classrooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classrooms.swift; sourceTree = "<group>"; };
+		A5E33B6728B3C6360012A2FA /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		A5E33B6928B3C78E0012A2FA /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +59,10 @@
 		A5E33B5228B3C1BD0012A2FA /* 24H Study Room */ = {
 			isa = PBXGroup;
 			children = (
+				A5E33B6B28B3C7A70012A2FA /* Models */,
 				A5E33B5328B3C1BD0012A2FA /* _4H_Study_RoomApp.swift */,
-				A5E33B5528B3C1BD0012A2FA /* ContentView.swift */,
+				A5E33B6228B3C3C90012A2FA /* ViewModels */,
+				A5E33B6128B3C3800012A2FA /* ContentViews */,
 				A5E33B5728B3C1BF0012A2FA /* Assets.xcassets */,
 				A5E33B5928B3C1BF0012A2FA /* Preview Content */,
 			);
@@ -65,6 +75,32 @@
 				A5E33B5A28B3C1BF0012A2FA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A5E33B6128B3C3800012A2FA /* ContentViews */ = {
+			isa = PBXGroup;
+			children = (
+				A5E33B5528B3C1BD0012A2FA /* RootView.swift */,
+				A5E33B6328B3C4210012A2FA /* Classroom.swift */,
+				A5E33B6528B3C54C0012A2FA /* Classrooms.swift */,
+				A5E33B6728B3C6360012A2FA /* Profile.swift */,
+				A5E33B6928B3C78E0012A2FA /* Friends.swift */,
+			);
+			path = ContentViews;
+			sourceTree = "<group>";
+		};
+		A5E33B6228B3C3C90012A2FA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A5E33B6B28B3C7A70012A2FA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +173,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5E33B5628B3C1BD0012A2FA /* ContentView.swift in Sources */,
+				A5E33B5628B3C1BD0012A2FA /* RootView.swift in Sources */,
+				A5E33B6A28B3C78E0012A2FA /* Friends.swift in Sources */,
+				A5E33B6828B3C6360012A2FA /* Profile.swift in Sources */,
+				A5E33B6628B3C54C0012A2FA /* Classrooms.swift in Sources */,
 				A5E33B5428B3C1BD0012A2FA /* _4H_Study_RoomApp.swift in Sources */,
+				A5E33B6428B3C4210012A2FA /* Classroom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
