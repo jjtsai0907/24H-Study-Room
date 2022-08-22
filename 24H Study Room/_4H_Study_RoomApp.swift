@@ -11,7 +11,7 @@ import SwiftUI
 struct _4H_Study_RoomApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
         }
     }
 }
