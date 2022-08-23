@@ -8,13 +8,31 @@
 import SwiftUI
 
 struct Classrooms: View {
+    var viewModel: ClassroomsViewModel
+
+    private let layout = [
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
+    
     var body: some View {
-        Text("All classrooms!")
+        LazyVGrid(columns: layout) {
+            ForEach(viewModel.subjects, id: \.self) { subject in
+                Button {
+                    viewModel.selectSubject(selectedSubject: subject)
+                } label: {
+                    Image("japan")
+                        .resizable()
+                        .scaledToFit()
+                        .padding()
+                }
+            }
+        }
     }
 }
 
 struct Classrooms_Previews: PreviewProvider {
     static var previews: some View {
-        Classrooms()
+        Classrooms(viewModel: ClassroomsViewModel())
     }
 }

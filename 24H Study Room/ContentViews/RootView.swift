@@ -10,9 +10,9 @@ import SwiftUI
 struct RootView: View {
     var body: some View {
         TabView {
-            Classrooms()
+            Classrooms(viewModel: ClassroomsViewModel())
                 .tabItem {
-                    Label("Rooms", systemImage: "building.columns.fill")
+                    Label("Subjects", systemImage: "building.columns.fill")
                 }
             
             Profile()
