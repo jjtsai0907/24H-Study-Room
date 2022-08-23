@@ -8,13 +8,37 @@
 import SwiftUI
 
 struct Profile: View {
+    @ObservedObject var viewModel: ProfileViewModel
+    private let layout = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
+    
     var body: some View {
-        Text("My profile!")
+        VStack {
+            Image("baby")
+                .resizable()
+                .scaledToFit()
+                .frame(maxWidth: 200)
+                .padding(.top, 20)
+            Button ("Change outfit/ character") {
+                viewModel.clickUpgradeButton()
+            }.padding(.bottom, 20)
+            
+            VStack {
+                Text("Purchasing Power:")
+                LazyVGrid(columns: layout) {
+                    ForEach(viewModel.numberOfMeals, id: \.self) { item in
+                        Image("ramen")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(maxWidth: 50)
+                    }
+                }
+            }
+        }
     }
 }
 
 struct MyProfile_Previews: PreviewProvider {
     static var previews: some View {
-        Profile()
+        Profile(viewModel: ProfileViewModel())
     }
 }

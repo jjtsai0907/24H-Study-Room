@@ -15,7 +15,7 @@ struct RootView: View {
                     Label("Subjects", systemImage: "building.columns.fill")
                 }
             
-            Profile()
+            Profile(viewModel: ProfileViewModel())
                 .tabItem {
                     Label("Me", systemImage: "person.fill")
                 }
