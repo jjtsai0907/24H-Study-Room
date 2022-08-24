@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct Classroom: View {
+    @ObservedObject var viewModel: ClassroomViewModel
+   
     var body: some View {
-        Text("My classroom!")
+        Text(" \(viewModel.subject) Classroom")
     }
 }
 
 struct Classroom_Previews: PreviewProvider {
     static var previews: some View {
-        Classroom()
+        Classroom(viewModel: ClassroomViewModel(subject: "English"))
     }
 }
