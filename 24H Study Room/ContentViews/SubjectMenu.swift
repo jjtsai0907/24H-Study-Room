@@ -22,7 +22,7 @@ struct SubjectMenu: View {
                 NavigationLink {
                     Classroom(viewModel: ClassroomViewModel(subject: subject))
                 } label: {
-                    Image("japan")
+                    Image(subject.lowercased())
                         .resizable()
                         .scaledToFit()
                         .padding(.horizontal)

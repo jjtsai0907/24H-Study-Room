@@ -9,7 +9,7 @@ import Foundation
 
 class SubjectMenuViewModel: ObservableObject {
     
-    @Published private(set) var subjects = ["Japanese", "English", "Math", "Science", "Mandarin", "Social Science"]
+    @Published private(set) var subjects = ["Japanese", "English", "Math", "Chemistry", "Mandarin", "Social Science"]
     
     func selectSubject (selectedSubject: String) {
         print("\(selectedSubject) is selected")

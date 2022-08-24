@@ -25,7 +25,8 @@ struct RootView: View {
                     .tabItem {
                         Label("Friends", systemImage: "figure.stand.line.dotted.figure.stand")
                     }
-            }.navigationTitle("24H Study Room")
+            }
+            .navigationTitle("24H Study Room")
         }
     }
 }
