@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ClassroomsViewModel: ObservableObject {
+class SubjectMenuViewModel: ObservableObject {
     
     @Published private(set) var subjects = ["Japanese", "English", "Math", "Science", "Mandarin", "Social Science"]
     

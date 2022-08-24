@@ -9,20 +9,23 @@ import SwiftUI
 
 struct RootView: View {
     var body: some View {
-        TabView {
-            Classrooms(viewModel: ClassroomsViewModel())
-                .tabItem {
-                    Label("Subjects", systemImage: "building.columns.fill")
-                }
-            
-            Profile()
-                .tabItem {
-                    Label("Me", systemImage: "person.fill")
-                }
-            Friends()
-                .tabItem {
-                    Label("Friends", systemImage: "figure.stand.line.dotted.figure.stand")
-                }
+        
+        NavigationView {
+            TabView {
+                SubjectMenu(viewModel: SubjectMenuViewModel())
+                    .tabItem {
+                        Label("Subjects", systemImage: "building.columns.fill")
+                    }
+                
+                Profile()
+                    .tabItem {
+                        Label("Me", systemImage: "person.fill")
+                    }
+                Friends()
+                    .tabItem {
+                        Label("Friends", systemImage: "figure.stand.line.dotted.figure.stand")
+                    }
+            }.navigationTitle("24H Study Room")
         }
     }
 }

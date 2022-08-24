@@ -7,9 +7,10 @@
 
 import SwiftUI
 
-struct Classrooms: View {
-    var viewModel: ClassroomsViewModel
-
+struct SubjectMenu: View {
+    var viewModel: SubjectMenuViewModel
+    @State var showingDetails = false
+    
     private let layout = [
         GridItem(.flexible()),
         GridItem(.flexible())
@@ -18,13 +19,14 @@ struct Classrooms: View {
     var body: some View {
         LazyVGrid(columns: layout) {
             ForEach(viewModel.subjects, id: \.self) { subject in
-                Button {
-                    viewModel.selectSubject(selectedSubject: subject)
+                NavigationLink {
+                    Classroom(viewModel: ClassroomViewModel(subject: subject))
                 } label: {
                     Image("japan")
                         .resizable()
                         .scaledToFit()
-                        .padding()
+                        .padding(.horizontal)
+                        .padding(.bottom)
                 }
             }
         }
@@ -33,6 +35,6 @@ struct Classrooms: View {
 
 struct Classrooms_Previews: PreviewProvider {
     static var previews: some View {
-        Classrooms(viewModel: ClassroomsViewModel())
+        SubjectMenu(viewModel: SubjectMenuViewModel())
     }
 }
