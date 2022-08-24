@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Classrooms: View {
-    var viewModel: ClassroomsViewModel
+    @ObservedObject var viewModel: ClassroomsViewModel
 
     private let layout = [
         GridItem(.flexible()),

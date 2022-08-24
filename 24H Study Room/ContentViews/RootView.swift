@@ -19,7 +19,7 @@ struct RootView: View {
                 .tabItem {
                     Label("Me", systemImage: "person.fill")
                 }
-            Friends()
+            Friends(viewModel: FriendsViewModel())
                 .tabItem {
                     Label("Friends", systemImage: "figure.stand.line.dotted.figure.stand")
                 }

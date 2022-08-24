@@ -8,13 +8,29 @@
 import SwiftUI
 
 struct Friends: View {
+    @ObservedObject var viewModel: FriendsViewModel
+    private let layout = [GridItem(.flexible()), GridItem(.flexible())]
+    
     var body: some View {
-        Text("My friends!")
+        ScrollView {
+            LazyVGrid(columns: layout) {
+                ForEach(viewModel.namesOfClassmates, id: \.self) { classmate in
+                    Button {
+                        viewModel.selectStudent(studentName: classmate)
+                    } label: {
+                        VStack {
+                            Image("student")
+                            Text(classmate)
+                        }
+                    }.padding()
+                }
+            }.padding(50)
+        }
     }
 }
 
 struct Friends_Previews: PreviewProvider {
     static var previews: some View {
-        Friends()
+        Friends(viewModel: FriendsViewModel())
     }
 }
