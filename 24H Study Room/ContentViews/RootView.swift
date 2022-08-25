@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RootView: View {
     var body: some View {
-        
+
         NavigationView {
             TabView {
                 SubjectMenu(viewModel: SubjectMenuViewModel(), gridLayout: GridLayout())
@@ -17,11 +17,11 @@ struct RootView: View {
                         Label("Subjects", systemImage: "building.columns.fill")
                     }
                 
-                Profile()
+                Profile(viewModel: ProfileViewModel())
                     .tabItem {
                         Label("Me", systemImage: "person.fill")
                     }
-                Friends()
+                Friends(viewModel: FriendsViewModel())
                     .tabItem {
                         Label("Friends", systemImage: "figure.stand.line.dotted.figure.stand")
                     }
