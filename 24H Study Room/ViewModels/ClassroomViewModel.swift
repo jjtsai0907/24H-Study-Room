@@ -13,4 +13,10 @@ class ClassroomViewModel: ObservableObject {
     init(subject: String) {
         self.subject = subject
     }
+    
+    var classmatesWhoAreStudying = ["Daniel", "Stefan", "Henrik", "Patrik", "Nicke", "Erik"]
+    
+    func pokeClassmate(classmate: String) {
+        print("poked \(classmate)")
+    }
 }

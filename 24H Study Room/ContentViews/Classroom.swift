@@ -9,9 +9,39 @@ import SwiftUI
 
 struct Classroom: View {
     @ObservedObject var viewModel: ClassroomViewModel
+    private let layout = [GridItem(.flexible()),
+                          GridItem(.flexible()),
+                          GridItem(.flexible()),
+                          GridItem(.flexible())]
    
     var body: some View {
-        Text(" \(viewModel.subject) Classroom")
+        ZStack {
+            Image("classroom")
+                .resizable()
+                .scaledToFill()
+                .ignoresSafeArea()
+                
+            VStack {
+                Text(" \(viewModel.subject) Classroom")
+                
+                LazyVGrid(columns: layout) {
+                    ForEach (viewModel.classmatesWhoAreStudying, id: \.self) { classmate in
+                        VStack {
+                            Image("student")
+                            
+                            Button {
+                                viewModel.pokeClassmate(classmate: classmate)
+                            } label: {
+                                VStack {
+                                    Text("Irritate")
+                                    Text(classmate)
+                                }
+                            }
+                        }
+                    }
+                }
+            }.padding(.horizontal, 100)
+        }
     }
 }
 
