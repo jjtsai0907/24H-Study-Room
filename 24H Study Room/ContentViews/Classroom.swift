@@ -9,10 +9,7 @@ import SwiftUI
 
 struct Classroom: View {
     @ObservedObject var viewModel: ClassroomViewModel
-    private let layout = [GridItem(.flexible()),
-                          GridItem(.flexible()),
-                          GridItem(.flexible()),
-                          GridItem(.flexible())]
+    let gridLayout: GridLayout
    
     var body: some View {
         ZStack {
@@ -24,7 +21,7 @@ struct Classroom: View {
             VStack {
                 Text(" \(viewModel.subject) Classroom")
                 
-                LazyVGrid(columns: layout) {
+                LazyVGrid(columns: gridLayout.fourGridItems) {
                     ForEach (viewModel.classmatesWhoAreStudying, id: \.self) { classmate in
                         VStack {
                             Image("student")
@@ -47,6 +44,6 @@ struct Classroom: View {
 
 struct Classroom_Previews: PreviewProvider {
     static var previews: some View {
-        Classroom(viewModel: ClassroomViewModel(subject: "English"))
+        Classroom(viewModel: ClassroomViewModel(subject: "English"), gridLayout: GridLayout())
     }
 }

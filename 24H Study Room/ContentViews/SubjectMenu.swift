@@ -9,18 +9,14 @@ import SwiftUI
 
 struct SubjectMenu: View {
     var viewModel: SubjectMenuViewModel
+    let gridLayout: GridLayout
     @State var showingDetails = false
     
-    private let layout = [
-        GridItem(.flexible()),
-        GridItem(.flexible())
-    ]
-    
     var body: some View {
-        LazyVGrid(columns: layout) {
+        LazyVGrid(columns: gridLayout.twoGridItems) {
             ForEach(viewModel.subjects, id: \.self) { subject in
                 NavigationLink {
-                    Classroom(viewModel: ClassroomViewModel(subject: subject))
+                    Classroom(viewModel: ClassroomViewModel(subject: subject), gridLayout: GridLayout())
                 } label: {
                     Image(subject.lowercased())
                         .resizable()
@@ -35,6 +31,6 @@ struct SubjectMenu: View {
 
 struct Classrooms_Previews: PreviewProvider {
     static var previews: some View {
-        SubjectMenu(viewModel: SubjectMenuViewModel())
+        SubjectMenu(viewModel: SubjectMenuViewModel(), gridLayout: GridLayout())
     }
 }
