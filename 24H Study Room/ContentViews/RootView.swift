@@ -12,7 +12,7 @@ struct RootView: View {
         
         NavigationView {
             TabView {
-                SubjectMenu(viewModel: SubjectMenuViewModel())
+                SubjectMenu(viewModel: SubjectMenuViewModel(), gridLayout: GridLayout())
                     .tabItem {
                         Label("Subjects", systemImage: "building.columns.fill")
                     }
