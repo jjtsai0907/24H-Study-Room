@@ -9,11 +9,10 @@ import SwiftUI
 
 struct Friends: View {
     @ObservedObject var viewModel: FriendsViewModel
-    private let layout = [GridItem(.flexible()), GridItem(.flexible())]
     
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: layout) {
+            LazyVGrid(columns: GridItem.makeCutomNumberOfGridItems(number: 2)) {
                 ForEach(viewModel.namesOfClassmates, id: \.self) { classmate in
                     Button {
                         viewModel.selectStudent(studentName: classmate)
