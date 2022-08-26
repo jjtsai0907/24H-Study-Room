@@ -9,10 +9,10 @@ import SwiftUI
 
 struct RootView: View {
     var body: some View {
-
+        
         NavigationView {
             TabView {
-                SubjectMenu(viewModel: SubjectMenuViewModel(), gridLayout: GridLayout())
+                SubjectMenu(viewModel: SubjectMenuViewModel())
                     .tabItem {
                         Label("Subjects", systemImage: "building.columns.fill")
                     }

@@ -9,7 +9,6 @@ import SwiftUI
 
 struct Profile: View {
     @ObservedObject var viewModel: ProfileViewModel
-    private let layout = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
     
     var body: some View {
         VStack {
@@ -24,7 +23,7 @@ struct Profile: View {
             
             VStack {
                 Text("Purchasing Power:")
-                LazyVGrid(columns: layout) {
+                LazyVGrid(columns: GridItem.makeCutomNumberOfGridItems(number: 4)) {
                     ForEach(viewModel.numberOfMeals, id: \.self) { item in
                         Image("ramen")
                             .resizable()
