@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A504F74128BE1F4200B110BD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A504F74028BE1F4200B110BD /* GoogleService-Info.plist */; };
+		A504F74428BE20D000B110BD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A504F74328BE20D000B110BD /* FirebaseFirestore */; };
 		A52F2CF028B4F06400D04445 /* SubjectMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52F2CEF28B4F06400D04445 /* SubjectMenuViewModel.swift */; };
 		A52F2CF728B518DC00D04445 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52F2CF628B518DC00D04445 /* ProfileViewModel.swift */; };
 		A52F2CF928B523B900D04445 /* FriendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52F2CF828B523B900D04445 /* FriendsViewModel.swift */; };
@@ -23,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A504F74028BE1F4200B110BD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A52F2CEF28B4F06400D04445 /* SubjectMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectMenuViewModel.swift; sourceTree = "<group>"; };
 		A52F2CF628B518DC00D04445 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		A52F2CF828B523B900D04445 /* FriendsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewModel.swift; sourceTree = "<group>"; };
@@ -44,12 +47,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A504F74428BE20D000B110BD /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A504F73F28BE1ED000B110BD /* Firebase Tools */ = {
+			isa = PBXGroup;
+			children = (
+				A504F74028BE1F4200B110BD /* GoogleService-Info.plist */,
+			);
+			path = "Firebase Tools";
+			sourceTree = "<group>";
+		};
 		A52F2CF128B5013600D04445 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				A5E33B5328B3C1BD0012A2FA /* _4H_Study_RoomApp.swift */,
+				A504F73F28BE1ED000B110BD /* Firebase Tools */,
 				A52F2CF128B5013600D04445 /* Views */,
 				A5E33B6B28B3C7A70012A2FA /* Models */,
 				A5E33B6228B3C3C90012A2FA /* ViewModels */,
@@ -142,6 +155,9 @@
 			dependencies = (
 			);
 			name = "24H Study Room";
+			packageProductDependencies = (
+				A504F74328BE20D000B110BD /* FirebaseFirestore */,
+			);
 			productName = "24H Study Room";
 			productReference = A5E33B5028B3C1BD0012A2FA /* 24H Study Room.app */;
 			productType = "com.apple.product-type.application";
@@ -170,6 +186,9 @@
 				Base,
 			);
 			mainGroup = A5E33B4728B3C1BD0012A2FA;
+			packageReferences = (
+				A504F74228BE20D000B110BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = A5E33B5128B3C1BD0012A2FA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -186,6 +205,7 @@
 			files = (
 				A5E33B5B28B3C1BF0012A2FA /* Preview Assets.xcassets in Resources */,
 				A5E33B5828B3C1BF0012A2FA /* Assets.xcassets in Resources */,
+				A504F74128BE1F4200B110BD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +427,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A504F74228BE20D000B110BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A504F74328BE20D000B110BD /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A504F74228BE20D000B110BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A5E33B4828B3C1BD0012A2FA /* Project object */;
 }
