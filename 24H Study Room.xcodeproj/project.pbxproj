@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A504F74128BE1F4200B110BD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A504F74028BE1F4200B110BD /* GoogleService-Info.plist */; };
 		A504F74428BE20D000B110BD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A504F74328BE20D000B110BD /* FirebaseFirestore */; };
+		A504F74728BE4F9F00B110BD /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A504F74628BE4F9F00B110BD /* FirestoreService.swift */; };
+		A504F74928BE546200B110BD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A504F74828BE546100B110BD /* GoogleService-Info.plist */; };
+		A504F74C28BE5A5700B110BD /* FirestoreServicing.swift in Sources */ = {isa = PBXBuildFile; fileRef = A504F74B28BE5A5700B110BD /* FirestoreServicing.swift */; };
+		A504F74F28BE5C5000B110BD /* MockFirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A504F74E28BE5C5000B110BD /* MockFirestoreService.swift */; };
 		A52F2CF028B4F06400D04445 /* SubjectMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52F2CEF28B4F06400D04445 /* SubjectMenuViewModel.swift */; };
 		A52F2CF728B518DC00D04445 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52F2CF628B518DC00D04445 /* ProfileViewModel.swift */; };
 		A52F2CF928B523B900D04445 /* FriendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52F2CF828B523B900D04445 /* FriendsViewModel.swift */; };
@@ -25,7 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A504F74028BE1F4200B110BD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A504F74628BE4F9F00B110BD /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
+		A504F74828BE546100B110BD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A504F74B28BE5A5700B110BD /* FirestoreServicing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreServicing.swift; sourceTree = "<group>"; };
+		A504F74E28BE5C5000B110BD /* MockFirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFirestoreService.swift; sourceTree = "<group>"; };
 		A52F2CEF28B4F06400D04445 /* SubjectMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectMenuViewModel.swift; sourceTree = "<group>"; };
 		A52F2CF628B518DC00D04445 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		A52F2CF828B523B900D04445 /* FriendsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewModel.swift; sourceTree = "<group>"; };
@@ -57,9 +63,33 @@
 		A504F73F28BE1ED000B110BD /* Firebase Tools */ = {
 			isa = PBXGroup;
 			children = (
-				A504F74028BE1F4200B110BD /* GoogleService-Info.plist */,
+				A504F74828BE546100B110BD /* GoogleService-Info.plist */,
 			);
 			path = "Firebase Tools";
+			sourceTree = "<group>";
+		};
+		A504F74528BE4F7C00B110BD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A504F74628BE4F9F00B110BD /* FirestoreService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A504F74A28BE5A2B00B110BD /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A504F74B28BE5A5700B110BD /* FirestoreServicing.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A504F74D28BE5C1E00B110BD /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				A504F74E28BE5C5000B110BD /* MockFirestoreService.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		A52F2CF128B5013600D04445 /* Views */ = {
@@ -89,6 +119,9 @@
 			isa = PBXGroup;
 			children = (
 				A5E33B5328B3C1BD0012A2FA /* _4H_Study_RoomApp.swift */,
+				A504F74D28BE5C1E00B110BD /* Mocks */,
+				A504F74A28BE5A2B00B110BD /* Protocols */,
+				A504F74528BE4F7C00B110BD /* Services */,
 				A504F73F28BE1ED000B110BD /* Firebase Tools */,
 				A52F2CF128B5013600D04445 /* Views */,
 				A5E33B6B28B3C7A70012A2FA /* Models */,
@@ -205,7 +238,7 @@
 			files = (
 				A5E33B5B28B3C1BF0012A2FA /* Preview Assets.xcassets in Resources */,
 				A5E33B5828B3C1BF0012A2FA /* Assets.xcassets in Resources */,
-				A504F74128BE1F4200B110BD /* GoogleService-Info.plist in Resources */,
+				A504F74928BE546200B110BD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,9 +255,12 @@
 				A52F2CF028B4F06400D04445 /* SubjectMenuViewModel.swift in Sources */,
 				A5E33B6828B3C6360012A2FA /* Profile.swift in Sources */,
 				A5E33B6628B3C54C0012A2FA /* SubjectMenu.swift in Sources */,
+				A504F74C28BE5A5700B110BD /* FirestoreServicing.swift in Sources */,
 				A59664E428B75B6F004BA9F4 /* GridItemExtension.swift in Sources */,
 				A5E33B5428B3C1BD0012A2FA /* _4H_Study_RoomApp.swift in Sources */,
 				A52F2CF728B518DC00D04445 /* ProfileViewModel.swift in Sources */,
+				A504F74728BE4F9F00B110BD /* FirestoreService.swift in Sources */,
+				A504F74F28BE5C5000B110BD /* MockFirestoreService.swift in Sources */,
 				A5E33B6428B3C4210012A2FA /* Classroom.swift in Sources */,
 				A52F2CF928B523B900D04445 /* FriendsViewModel.swift in Sources */,
 			);

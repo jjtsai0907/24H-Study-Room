@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseFirestore
 
 struct Friends: View {
     @ObservedObject var viewModel: FriendsViewModel
@@ -16,6 +17,7 @@ struct Friends: View {
                 ForEach(viewModel.namesOfClassmates, id: \.self) { classmate in
                     Button {
                         viewModel.selectStudent(studentName: classmate)
+                        viewModel.loadOnlineClassmates()
                     } label: {
                         VStack {
                             Image("student")
@@ -30,6 +32,6 @@ struct Friends: View {
 
 struct Friends_Previews: PreviewProvider {
     static var previews: some View {
-        Friends(viewModel: FriendsViewModel())
+        Friends(viewModel: FriendsViewModel(firestoreService: MockFirestoreService()))
     }
 }

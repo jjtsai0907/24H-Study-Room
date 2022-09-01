@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct RootView: View {
     var body: some View {
@@ -21,7 +22,7 @@ struct RootView: View {
                     .tabItem {
                         Label("Me", systemImage: "person.fill")
                     }
-                Friends(viewModel: FriendsViewModel())
+                Friends(viewModel: FriendsViewModel(firestoreService: FirestoreService()))
                     .tabItem {
                         Label("Friends", systemImage: "figure.stand.line.dotted.figure.stand")
                     }
