@@ -18,7 +18,7 @@ struct RootView: View {
                         Label("Subjects", systemImage: "building.columns.fill")
                     }
                 
-                Profile(viewModel: ProfileViewModel())
+                Profile(viewModel: ProfileViewModel(fireAuthService: FireAuthService()))
                     .tabItem {
                         Label("Me", systemImage: "person.fill")
                     }
