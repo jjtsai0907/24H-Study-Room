@@ -10,8 +10,8 @@ import FirebaseAuth
 
 class FireAuthService: FireAuthServicing {
     
-    func login(email: Email, password: String) {
-        Auth.auth().createUser(withEmail: email.emailString, password: password) { authResult, error in
+    func login(email: Email, password: Password) {
+        Auth.auth().createUser(withEmail: email.emailString, password: password.passwordString) { authResult, error in
             guard let user = authResult?.user, error == nil else {
                 print("There is error to create a new account: \(String(describing: error?.localizedDescription))")
                 return

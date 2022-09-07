@@ -22,10 +22,13 @@ struct Login: View {
             }
                 
             TextField("Password:", text: $viewModel.inputPassword)
+                .onChange(of: viewModel.inputPassword) { newValue in
+                    viewModel.validatePassword(inputPassword: newValue)
+                }
             
-            if viewModel.email != nil {
+            if viewModel.email != nil && viewModel.password != nil {
                 Button {
-                    viewModel.login(email: viewModel.email!)
+                    viewModel.login(email: viewModel.email!, password: viewModel.password!)
                 } label: {
                     Text("Create account")
                 }

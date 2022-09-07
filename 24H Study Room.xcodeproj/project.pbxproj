@@ -23,6 +23,7 @@
 		A52F2CF728B518DC00D04445 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52F2CF628B518DC00D04445 /* ProfileViewModel.swift */; };
 		A52F2CF928B523B900D04445 /* FriendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52F2CF828B523B900D04445 /* FriendsViewModel.swift */; };
 		A5722DD628C765F100FFAD79 /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5722DD528C765F100FFAD79 /* Email.swift */; };
+		A5722DD828C8AFA700FFAD79 /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5722DD728C8AFA700FFAD79 /* Password.swift */; };
 		A59664E428B75B6F004BA9F4 /* GridItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59664E328B75B6F004BA9F4 /* GridItemExtension.swift */; };
 		A59ED66328B64B8400E90D30 /* ClassroomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ED66228B64B8400E90D30 /* ClassroomViewModel.swift */; };
 		A5E33B5428B3C1BD0012A2FA /* _4H_Study_RoomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E33B5328B3C1BD0012A2FA /* _4H_Study_RoomApp.swift */; };
@@ -50,6 +51,7 @@
 		A52F2CF628B518DC00D04445 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		A52F2CF828B523B900D04445 /* FriendsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewModel.swift; sourceTree = "<group>"; };
 		A5722DD528C765F100FFAD79 /* Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
+		A5722DD728C8AFA700FFAD79 /* Password.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password.swift; sourceTree = "<group>"; };
 		A59664E328B75B6F004BA9F4 /* GridItemExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridItemExtension.swift; sourceTree = "<group>"; };
 		A59ED66228B64B8400E90D30 /* ClassroomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassroomViewModel.swift; sourceTree = "<group>"; };
 		A5E33B5028B3C1BD0012A2FA /* 24H Study Room.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "24H Study Room.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +193,7 @@
 			children = (
 				A59664E328B75B6F004BA9F4 /* GridItemExtension.swift */,
 				A5722DD528C765F100FFAD79 /* Email.swift */,
+				A5722DD728C8AFA700FFAD79 /* Password.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				A5E33B5428B3C1BD0012A2FA /* _4H_Study_RoomApp.swift in Sources */,
 				A52F2CF728B518DC00D04445 /* ProfileViewModel.swift in Sources */,
 				A504F74728BE4F9F00B110BD /* FirestoreService.swift in Sources */,
+				A5722DD828C8AFA700FFAD79 /* Password.swift in Sources */,
 				A504F74F28BE5C5000B110BD /* MockFirestoreService.swift in Sources */,
 				A508D8E428C5F791001BE5C3 /* Login.swift in Sources */,
 				A5E33B6428B3C4210012A2FA /* Classroom.swift in Sources */,

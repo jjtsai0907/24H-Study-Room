@@ -8,5 +8,5 @@
 import Foundation
 
 protocol FireAuthServicing {
-    func login(email: Email, password: String)
+    func login(email: Email, password: Password)
 }
