@@ -16,9 +16,13 @@
 		A508D8DE28C5E903001BE5C3 /* FireAuthServicing.swift in Sources */ = {isa = PBXBuildFile; fileRef = A508D8DD28C5E903001BE5C3 /* FireAuthServicing.swift */; };
 		A508D8E028C5E944001BE5C3 /* MockFireAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A508D8DF28C5E944001BE5C3 /* MockFireAuthService.swift */; };
 		A508D8E228C5E967001BE5C3 /* FireAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A508D8E128C5E967001BE5C3 /* FireAuthService.swift */; };
+		A508D8E428C5F791001BE5C3 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A508D8E328C5F791001BE5C3 /* Login.swift */; };
+		A508D8E628C5F9EA001BE5C3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A508D8E528C5F9EA001BE5C3 /* LoginViewModel.swift */; };
+		A508D8E828C6158D001BE5C3 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A508D8E728C6158D001BE5C3 /* Tabs.swift */; };
 		A52F2CF028B4F06400D04445 /* SubjectMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52F2CEF28B4F06400D04445 /* SubjectMenuViewModel.swift */; };
 		A52F2CF728B518DC00D04445 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52F2CF628B518DC00D04445 /* ProfileViewModel.swift */; };
 		A52F2CF928B523B900D04445 /* FriendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52F2CF828B523B900D04445 /* FriendsViewModel.swift */; };
+		A5722DD628C765F100FFAD79 /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5722DD528C765F100FFAD79 /* Email.swift */; };
 		A59664E428B75B6F004BA9F4 /* GridItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59664E328B75B6F004BA9F4 /* GridItemExtension.swift */; };
 		A59ED66328B64B8400E90D30 /* ClassroomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ED66228B64B8400E90D30 /* ClassroomViewModel.swift */; };
 		A5E33B5428B3C1BD0012A2FA /* _4H_Study_RoomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E33B5328B3C1BD0012A2FA /* _4H_Study_RoomApp.swift */; };
@@ -39,9 +43,13 @@
 		A508D8DD28C5E903001BE5C3 /* FireAuthServicing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireAuthServicing.swift; sourceTree = "<group>"; };
 		A508D8DF28C5E944001BE5C3 /* MockFireAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFireAuthService.swift; sourceTree = "<group>"; };
 		A508D8E128C5E967001BE5C3 /* FireAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireAuthService.swift; sourceTree = "<group>"; };
+		A508D8E328C5F791001BE5C3 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		A508D8E528C5F9EA001BE5C3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		A508D8E728C6158D001BE5C3 /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
 		A52F2CEF28B4F06400D04445 /* SubjectMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectMenuViewModel.swift; sourceTree = "<group>"; };
 		A52F2CF628B518DC00D04445 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		A52F2CF828B523B900D04445 /* FriendsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewModel.swift; sourceTree = "<group>"; };
+		A5722DD528C765F100FFAD79 /* Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
 		A59664E328B75B6F004BA9F4 /* GridItemExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridItemExtension.swift; sourceTree = "<group>"; };
 		A59ED66228B64B8400E90D30 /* ClassroomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassroomViewModel.swift; sourceTree = "<group>"; };
 		A5E33B5028B3C1BD0012A2FA /* 24H Study Room.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "24H Study Room.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +168,8 @@
 				A5E33B6528B3C54C0012A2FA /* SubjectMenu.swift */,
 				A5E33B6728B3C6360012A2FA /* Profile.swift */,
 				A5E33B6928B3C78E0012A2FA /* Friends.swift */,
+				A508D8E328C5F791001BE5C3 /* Login.swift */,
+				A508D8E728C6158D001BE5C3 /* Tabs.swift */,
 			);
 			path = ContentViews;
 			sourceTree = "<group>";
@@ -171,6 +181,7 @@
 				A52F2CF828B523B900D04445 /* FriendsViewModel.swift */,
 				A52F2CEF28B4F06400D04445 /* SubjectMenuViewModel.swift */,
 				A59ED66228B64B8400E90D30 /* ClassroomViewModel.swift */,
+				A508D8E528C5F9EA001BE5C3 /* LoginViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -179,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				A59664E328B75B6F004BA9F4 /* GridItemExtension.swift */,
+				A5722DD528C765F100FFAD79 /* Email.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -265,10 +277,12 @@
 				A5E33B5628B3C1BD0012A2FA /* RootView.swift in Sources */,
 				A508D8E228C5E967001BE5C3 /* FireAuthService.swift in Sources */,
 				A5E33B6A28B3C78E0012A2FA /* Friends.swift in Sources */,
+				A508D8E828C6158D001BE5C3 /* Tabs.swift in Sources */,
 				A59ED66328B64B8400E90D30 /* ClassroomViewModel.swift in Sources */,
 				A52F2CF028B4F06400D04445 /* SubjectMenuViewModel.swift in Sources */,
 				A5E33B6828B3C6360012A2FA /* Profile.swift in Sources */,
 				A508D8DE28C5E903001BE5C3 /* FireAuthServicing.swift in Sources */,
+				A5722DD628C765F100FFAD79 /* Email.swift in Sources */,
 				A5E33B6628B3C54C0012A2FA /* SubjectMenu.swift in Sources */,
 				A508D8E028C5E944001BE5C3 /* MockFireAuthService.swift in Sources */,
 				A504F74C28BE5A5700B110BD /* FirestoreServicing.swift in Sources */,
@@ -277,7 +291,9 @@
 				A52F2CF728B518DC00D04445 /* ProfileViewModel.swift in Sources */,
 				A504F74728BE4F9F00B110BD /* FirestoreService.swift in Sources */,
 				A504F74F28BE5C5000B110BD /* MockFirestoreService.swift in Sources */,
+				A508D8E428C5F791001BE5C3 /* Login.swift in Sources */,
 				A5E33B6428B3C4210012A2FA /* Classroom.swift in Sources */,
+				A508D8E628C5F9EA001BE5C3 /* LoginViewModel.swift in Sources */,
 				A52F2CF928B523B900D04445 /* FriendsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

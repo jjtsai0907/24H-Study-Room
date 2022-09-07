@@ -8,14 +8,9 @@
 import Foundation
 
 class ProfileViewModel: ObservableObject {
-    private(set) var fireAuthService: FireAuthServicing
     private(set) var numberOfMeals = 1...10
     
-    init(fireAuthService: FireAuthServicing) {
-        self.fireAuthService = fireAuthService
-    }
-    
     func clickUpgradeButton() {
-        fireAuthService.login(email: "rasmus1@gg.com", password: "123456")
+        print("Upgrade button is clikced")
     }
 }

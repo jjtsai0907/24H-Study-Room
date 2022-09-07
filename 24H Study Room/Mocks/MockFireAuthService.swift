@@ -8,7 +8,7 @@
 import Foundation
 
 class MockFireAuthService: FireAuthServicing {
-    func login(email: String, password: String) {
+    func login(email: Email, password: String) {
         print("Just created a new user")
     }
 }
