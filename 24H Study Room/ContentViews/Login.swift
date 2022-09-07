@@ -14,11 +14,18 @@ struct Login: View {
         VStack {
             Text("Please login/ sign up")
             TextField("Email:", text: $viewModel.inputEmail)
+                .onChange(of: viewModel.inputEmail) { newValue in
+                    viewModel.validateEmail(inputEmail: newValue)
+                }
+            if !viewModel.emailIsValid {
+                Text("Please enter correct email format")
+            }
+                
             TextField("Password:", text: $viewModel.inputPassword)
             
-            if !viewModel.inputEmail.isEmpty && !viewModel.inputPassword.isEmpty {
+            if viewModel.email != nil {
                 Button {
-                    viewModel.login()
+                    viewModel.login(email: viewModel.email!)
                 } label: {
                     Text("Create account")
                 }

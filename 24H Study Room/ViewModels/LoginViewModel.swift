@@ -11,16 +11,25 @@ class LoginViewModel: ObservableObject {
     private(set) var fireAuthService: FireAuthServicing
     @Published var inputEmail = ""
     @Published var inputPassword = ""
+    @Published var emailIsValid = false
+    @Published var email: Email?
 
     init(fireAuthService: FireAuthServicing) {
         self.fireAuthService = fireAuthService
     }
     
-    func login() {
+    func validateEmail(inputEmail: String) {
         guard let email = Email(emailString: inputEmail) else {
-            print("email error while loggingin")
+            print("email format is wrong")
+            emailIsValid = false
             return
         }
+        self.email = email
+        emailIsValid = true
+        print("email format is correct: \(email.emailString)")
+    }
+    
+    func login(email: Email) {
           fireAuthService.login(email: email, password: inputPassword)
       }
 }
