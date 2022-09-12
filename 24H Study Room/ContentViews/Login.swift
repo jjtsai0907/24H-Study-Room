@@ -28,7 +28,7 @@ struct Login: View {
             
             if viewModel.email != nil && viewModel.password != nil {
                 Button {
-                    viewModel.login(email: viewModel.email!, password: viewModel.password!)
+                    viewModel.createUser(email: viewModel.email!, password: viewModel.password!)
                 } label: {
                     Text("Create account")
                 }
