@@ -27,10 +27,19 @@ struct Login: View {
                 }
             
             if viewModel.email != nil && viewModel.password != nil {
-                Button {
-                    viewModel.createUser(email: viewModel.email!, password: viewModel.password!)
-                } label: {
-                    Text("Create account")
+                
+                HStack {
+                    Button {
+                        viewModel.login(email: viewModel.email!, password: viewModel.password!)
+                    } label: {
+                        Text("Log in")
+                    }
+                    
+                    Button {
+                        viewModel.createUser(email: viewModel.email!, password: viewModel.password!)
+                    } label: {
+                        Text("Create account")
+                    }
                 }
             }
         }

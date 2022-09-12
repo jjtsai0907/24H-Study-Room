@@ -8,7 +8,12 @@
 import Foundation
 
 class MockFireAuthService: FireAuthServicing {
+    
     func createUser(email: Email, password: Password, completion: @escaping (Result<UserCredential, Error>) -> Void) {
-        print("MockFireAuthService: Just created a new user")
+        print("MockFireAuthService: trying to create a new user")
+    }
+    
+    func login(email: Email, password: Password, completion: @escaping (Result<UserCredential, Error>) -> Void) {
+        print("MockFireAuthService: trying to log in an user")
     }
 }
