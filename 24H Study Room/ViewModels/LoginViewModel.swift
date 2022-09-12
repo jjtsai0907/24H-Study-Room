@@ -37,7 +37,14 @@ class LoginViewModel: ObservableObject {
         self.password = password
     }
     
-    func login(email: Email, password: Password) {
-        fireAuthService.login(email: email, password: password)
+    func createUser(email: Email, password: Password) {
+        fireAuthService.createUser(email: email, password: password, completion: { result in
+            switch result {
+            case .success(let user):
+                print("LoginViewModel: \(user.currentUser)")
+            case .failure(let error):
+                print("LoginViewModel: \(error.localizedDescription)")
+            }
+        })
     }
 }
