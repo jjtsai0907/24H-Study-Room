@@ -8,5 +8,5 @@
 import Foundation
 
 protocol FireAuthServicing {
-    func createUser(email: Email, password: Password, completion: @escaping (Result<UserCredential, CreateUserError>) -> Void)
+    func createUser(email: Email, password: Password, completion: @escaping (Result<UserCredential, Error>) -> Void)
 }
