@@ -40,6 +40,12 @@ struct Login: View {
                     } label: {
                         Text("Create account")
                     }
+                    
+                    Button {
+                        viewModel.logout()
+                    } label: {
+                        Text("Log out")
+                    }
                 }
             }
         }

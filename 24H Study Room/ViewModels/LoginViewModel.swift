@@ -58,4 +58,15 @@ class LoginViewModel: ObservableObject {
             }
         }
     }
+    
+    func logout() {
+        fireAuthService.logout { result in
+            switch result {
+            case .success():
+                print("LoginViewModel, logout(): you loged out")
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
 }

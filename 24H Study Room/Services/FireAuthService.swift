@@ -11,21 +11,50 @@ import FirebaseAuth
 class FireAuthService: FireAuthServicing {
     func createUser(email: Email, password: Password, completion: @escaping (Result<UserCredential, Error>) -> Void) {
         Auth.auth().createUser(withEmail: email.emailString, password: password.passwordString) { authResult, error in
-            guard let user = authResult?.user, error == nil else {
-                completion(.failure(error!))
+            if let error = error {
+                completion(.failure(error))
                 return
             }
+            
+            guard let user = authResult?.user else {
+                completion(.failure(FireAuthServiceError.emptyUserError))
+                return
+            }
+            
             completion(.success(UserCredential(currentUser: user)))
         }
     }
     
     func login(email: Email, password: Password, completion: @escaping (Result<UserCredential, Error>) -> Void) {
         Auth.auth().signIn(withEmail: email.emailString, password: password.passwordString) { authResult, error in
-            guard let user = authResult?.user, error == nil else {
-                completion(.failure(error!))
+            if let error = error {
+                completion(.failure(error))
                 return
             }
+            
+            guard let user = authResult?.user else {
+                completion(.failure(FireAuthServiceError.emptyUserError))
+                return
+            }
+            
             completion(.success(UserCredential(currentUser: user)))
         }
     }
+    
+    func logout(completion: @escaping (Result<Void, Error>) -> Void) {
+        do {
+            try Auth.auth().signOut()
+            completion(.success(()))
+        } catch {
+            completion(.failure(error))
+        }
+    }
+    
+    /// FireAuthServiceError
+
+    private enum FireAuthServiceError: Error {
+        case emptyUserError
+    }
 }
+
+

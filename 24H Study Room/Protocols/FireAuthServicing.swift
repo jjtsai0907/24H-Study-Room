@@ -11,4 +11,6 @@ protocol FireAuthServicing {
     func createUser(email: Email, password: Password, completion: @escaping (Result<UserCredential, Error>) -> Void)
     
     func login(email: Email, password: Password, completion: @escaping (Result<UserCredential, Error>) -> Void)
+    
+    func logout(completion: @escaping (Result<Void, Error>) -> Void)
 }
