@@ -10,8 +10,7 @@ import Firebase
 
 struct RootView: View {
     var body: some View {
-        
-        Login(viewModel: LoginViewModel(fireAuthService: FireAuthService()))
+        Tabs()
     }
 }
 

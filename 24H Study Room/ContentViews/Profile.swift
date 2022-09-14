@@ -17,12 +17,12 @@ struct Profile: View {
                 .scaledToFit()
                 .frame(maxWidth: 200)
                 .padding(.top, 20)
-            Button ("Change outfit/ character") {
+            Button (LocalizableString.profile_button_title.rawValue) {
                 viewModel.clickUpgradeButton()
             }.padding(.bottom, 20)
             
             VStack {
-                Text("Purchasing Power:")
+                Text(LocalizableString.profile_title.rawValue)
                 LazyVGrid(columns: GridItem.makeCutomNumberOfGridItems(number: 4)) {
                     ForEach(viewModel.numberOfMeals, id: \.self) { item in
                         Image("ramen")

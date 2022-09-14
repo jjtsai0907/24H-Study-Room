@@ -6,6 +6,7 @@
   
 */
 
+/// Login
 "login_title" = "登入";
 "login_invalid_email_format_message" = "請輸入正確的電子信箱格式";
 "login_email_input_title" = "電子信箱";
@@ -13,3 +14,7 @@
 "login_signup_button_title" = "申請新帳號";
 "login_login_button_title" = "登入";
 "login_logout_button_title" = "登出";
+
+/// Profile
+"profile_button_title" = "更換造型或角色";
+"profile_title" = "食物袋";

@@ -6,6 +6,7 @@
   
 */
 
+/// Login
 "login_title" = "Log in";
 "login_invalid_email_format_message" = "Please enter correct email format";
 "login_email_input_title" = "Email";
@@ -13,3 +14,7 @@
 "login_signup_button_title" = "Sign up";
 "login_login_button_title" = "Log in";
 "login_logout_button_title" = "Log out";
+
+/// Profile
+"profile_button_title" = "Change outfit/ character";
+"profile_title" = "Purchasing Power";
