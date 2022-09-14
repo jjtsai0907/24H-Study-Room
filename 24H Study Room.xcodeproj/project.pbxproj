@@ -19,6 +19,8 @@
 		A508D8E428C5F791001BE5C3 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A508D8E328C5F791001BE5C3 /* Login.swift */; };
 		A508D8E628C5F9EA001BE5C3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A508D8E528C5F9EA001BE5C3 /* LoginViewModel.swift */; };
 		A508D8E828C6158D001BE5C3 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A508D8E728C6158D001BE5C3 /* Tabs.swift */; };
+		A50963E728D0C95B0096D874 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A50963E928D0C95B0096D874 /* Localizable.strings */; };
+		A50963ED28D1DE550096D874 /* LocalizableString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50963EC28D1DE550096D874 /* LocalizableString.swift */; };
 		A52F2CF028B4F06400D04445 /* SubjectMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52F2CEF28B4F06400D04445 /* SubjectMenuViewModel.swift */; };
 		A52F2CF728B518DC00D04445 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52F2CF628B518DC00D04445 /* ProfileViewModel.swift */; };
 		A52F2CF928B523B900D04445 /* FriendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52F2CF828B523B900D04445 /* FriendsViewModel.swift */; };
@@ -48,6 +50,9 @@
 		A508D8E328C5F791001BE5C3 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		A508D8E528C5F9EA001BE5C3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		A508D8E728C6158D001BE5C3 /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
+		A50963E828D0C95B0096D874 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A50963EA28D0C9AD0096D874 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		A50963EC28D1DE550096D874 /* LocalizableString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableString.swift; sourceTree = "<group>"; };
 		A52F2CEF28B4F06400D04445 /* SubjectMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectMenuViewModel.swift; sourceTree = "<group>"; };
 		A52F2CF628B518DC00D04445 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		A52F2CF828B523B900D04445 /* FriendsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewModel.swift; sourceTree = "<group>"; };
@@ -115,6 +120,14 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		A50963EB28D1DE2D0096D874 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A50963EC28D1DE550096D874 /* LocalizableString.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		A52F2CF128B5013600D04445 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +154,7 @@
 		A5E33B5228B3C1BD0012A2FA /* 24H Study Room */ = {
 			isa = PBXGroup;
 			children = (
+				A50963EB28D1DE2D0096D874 /* Constants */,
 				A5E33B5328B3C1BD0012A2FA /* _4H_Study_RoomApp.swift */,
 				A504F74D28BE5C1E00B110BD /* Mocks */,
 				A504F74A28BE5A2B00B110BD /* Protocols */,
@@ -152,6 +166,7 @@
 				A5E33B6128B3C3800012A2FA /* ContentViews */,
 				A5E33B5728B3C1BF0012A2FA /* Assets.xcassets */,
 				A5E33B5928B3C1BF0012A2FA /* Preview Content */,
+				A50963E928D0C95B0096D874 /* Localizable.strings */,
 			);
 			path = "24H Study Room";
 			sourceTree = "<group>";
@@ -247,6 +262,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hant",
 			);
 			mainGroup = A5E33B4728B3C1BD0012A2FA;
 			packageReferences = (
@@ -268,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5E33B5B28B3C1BF0012A2FA /* Preview Assets.xcassets in Resources */,
+				A50963E728D0C95B0096D874 /* Localizable.strings in Resources */,
 				A5E33B5828B3C1BF0012A2FA /* Assets.xcassets in Resources */,
 				A504F74928BE546200B110BD /* GoogleService-Info.plist in Resources */,
 			);
@@ -300,6 +317,7 @@
 				A5722DD828C8AFA700FFAD79 /* Password.swift in Sources */,
 				A504F74F28BE5C5000B110BD /* MockFirestoreService.swift in Sources */,
 				A508D8E428C5F791001BE5C3 /* Login.swift in Sources */,
+				A50963ED28D1DE550096D874 /* LocalizableString.swift in Sources */,
 				A5E33B6428B3C4210012A2FA /* Classroom.swift in Sources */,
 				A508D8E628C5F9EA001BE5C3 /* LoginViewModel.swift in Sources */,
 				A52F2CF928B523B900D04445 /* FriendsViewModel.swift in Sources */,
@@ -308,11 +326,24 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		A50963E928D0C95B0096D874 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A50963E828D0C95B0096D874 /* en */,
+				A50963EA28D0C9AD0096D874 /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		A5E33B5C28B3C1BF0012A2FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -373,6 +404,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

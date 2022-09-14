@@ -12,16 +12,16 @@ struct Login: View {
     
     var body: some View {
         VStack {
-            Text("Please login/ sign up")
-            TextField("Email:", text: $viewModel.inputEmail)
+            Text(LocalizableString.login_title.rawValue)
+            TextField(LocalizableString.login_email_input_title.rawValue, text: $viewModel.inputEmail)
                 .onChange(of: viewModel.inputEmail) { newValue in
                     viewModel.validateEmail(inputEmail: newValue)
                 }
             if !viewModel.emailIsValid {
-                Text("Please enter correct email format")
+                Text(LocalizableString.login_invalid_email_format_message.rawValue)
             }
                 
-            TextField("Password:", text: $viewModel.inputPassword)
+            TextField(LocalizableString.login_password_input_title.rawValue, text: $viewModel.inputPassword)
                 .onChange(of: viewModel.inputPassword) { newValue in
                     viewModel.validatePassword(inputPassword: newValue)
                 }
@@ -32,19 +32,19 @@ struct Login: View {
                     Button {
                         viewModel.login(email: viewModel.email!, password: viewModel.password!)
                     } label: {
-                        Text("Log in")
+                        Text(LocalizableString.login_login_button_title.rawValue)
                     }
                     
                     Button {
                         viewModel.createUser(email: viewModel.email!, password: viewModel.password!)
                     } label: {
-                        Text("Create account")
+                        Text(LocalizableString.login_signup_button_title.rawValue)
                     }
                     
                     Button {
                         viewModel.logout()
                     } label: {
-                        Text("Log out")
+                        Text(LocalizableString.login_logout_button_title.rawValue)
                     }
                 }
             }
