@@ -18,7 +18,7 @@ struct Classroom: View {
                 .ignoresSafeArea()
                 
             VStack {
-                Text(" \(viewModel.subject) Classroom")
+                Text(viewModel.subject)
                 
                 LazyVGrid(columns: GridItem.makeCutomNumberOfGridItems(number: 3)) {
                     ForEach (viewModel.classmatesWhoAreStudying, id: \.self) { classmate in
@@ -29,7 +29,7 @@ struct Classroom: View {
                                 viewModel.pokeClassmate(classmate: classmate)
                             } label: {
                                 VStack {
-                                    Text("Irritate")
+                                    Text(LocalizableString.classroom_button_title.rawValue)
                                     Text(classmate)
                                 }
                             }

@@ -22,4 +22,6 @@ enum LocalizableString: LocalizedStringKey {
     case profile_button_title = "profile_button_title"
     case profile_title = "profile_title"
     
+    /// Classroom
+    case classroom_button_title = "classroom_button_title"
 }
