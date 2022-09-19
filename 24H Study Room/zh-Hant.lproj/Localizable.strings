@@ -6,6 +6,11 @@
   
 */
 
+/// Tabs
+"tabs_title_subjects" = "科目";
+"tabs_title_me" = "我";
+"tabs_title_friends" = "朋友";
+
 /// Login
 "login_title" = "登入";
 "login_invalid_email_format_message" = "請輸入正確的電子信箱格式";

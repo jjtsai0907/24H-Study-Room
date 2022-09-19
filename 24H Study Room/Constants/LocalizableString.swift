@@ -9,6 +9,11 @@ import SwiftUI
 
 enum LocalizableString: LocalizedStringKey {
     
+    /// Tabs
+    case tabs_title_subjects = "tabs_title_subjects"
+    case tabs_title_me = "tabs_title_me"
+    case tabs_title_friends = "tabs_title_friends"
+    
     /// Login
     case login_title = "login_title"
     case login_email_input_title = "login_email_input_title"

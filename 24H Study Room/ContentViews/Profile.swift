@@ -39,5 +39,8 @@ struct Profile: View {
 struct MyProfile_Previews: PreviewProvider {
     static var previews: some View {
         Profile(viewModel: ProfileViewModel())
+        
+        Profile(viewModel: ProfileViewModel())
+            .environment(\.locale, .init(identifier: "zh-Hant"))
     }
 }

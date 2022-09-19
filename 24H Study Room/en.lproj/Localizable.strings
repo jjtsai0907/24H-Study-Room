@@ -6,6 +6,11 @@
   
 */
 
+/// Tabs
+"tabs_title_subjects" = "Subjects";
+"tabs_title_me" = "Me";
+"tabs_title_friends" = "Friends";
+
 /// Login
 "login_title" = "Log in";
 "login_invalid_email_format_message" = "Please enter correct email format";

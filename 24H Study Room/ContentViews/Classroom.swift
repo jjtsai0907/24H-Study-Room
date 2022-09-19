@@ -44,5 +44,8 @@ struct Classroom: View {
 struct Classroom_Previews: PreviewProvider {
     static var previews: some View {
         Classroom(viewModel: ClassroomViewModel(subject: "English"))
+        
+        Classroom(viewModel: ClassroomViewModel(subject: "English"))
+            .environment(\.locale, .init(identifier: "zh-Hant"))
     }
 }

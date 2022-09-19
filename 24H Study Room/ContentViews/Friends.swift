@@ -33,5 +33,8 @@ struct Friends: View {
 struct Friends_Previews: PreviewProvider {
     static var previews: some View {
         Friends(viewModel: FriendsViewModel(firestoreService: MockFirestoreService()))
+        
+        Friends(viewModel: FriendsViewModel(firestoreService: MockFirestoreService()))
+            .environment(\.locale, .init(identifier: "zh-Hant"))
     }
 }

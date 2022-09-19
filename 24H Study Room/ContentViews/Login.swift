@@ -55,5 +55,8 @@ struct Login: View {
 struct Login_Previews: PreviewProvider {
     static var previews: some View {
         Login(viewModel: LoginViewModel(fireAuthService: MockFireAuthService()))
+        
+        Login(viewModel: LoginViewModel(fireAuthService: MockFireAuthService()))
+            .environment(\.locale, .init(identifier: "zh-Hant"))
     }
 }
