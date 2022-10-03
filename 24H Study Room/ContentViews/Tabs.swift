@@ -12,6 +12,11 @@ struct Tabs: View {
         
         NavigationView {
             TabView {
+                //TODO: this login tab is only temporary
+                Login(viewModel: LoginViewModel(fireAuthService: FireAuthService()))
+                    .tabItem {
+                        Image(systemName: "lock.icloud")
+                    }
                 SubjectMenu(viewModel: SubjectMenuViewModel())
                     .tabItem {
                         Label(LocalizableString.tabs_title_subjects.rawValue, systemImage: "building.columns.fill")

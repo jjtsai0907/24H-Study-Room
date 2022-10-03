@@ -18,6 +18,7 @@ struct Login: View {
                 .autocorrectionDisabled(true)
                 .keyboardType(.emailAddress)
 
+            // TODO: should not be shown when the view just appears
             if !viewModel.emailIsValid {
                 Text(LocalizableString.login_invalid_email_format_message.rawValue)
             }

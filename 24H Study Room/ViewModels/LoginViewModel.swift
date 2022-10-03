@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 class LoginViewModel: ObservableObject {
     private(set) var fireAuthService: FireAuthServicing
@@ -14,27 +15,24 @@ class LoginViewModel: ObservableObject {
     @Published var emailIsValid = false
     @Published var email: Email?
     @Published var password: Password?
+    private var subscriptions = Set<AnyCancellable>()
     
     init(fireAuthService: FireAuthServicing) {
         self.fireAuthService = fireAuthService
-    }
-    
-    func validateEmail(inputEmail: String) {
-        guard let email = Email(emailString: inputEmail) else {
-            self.email = nil
-            emailIsValid = false
-            return
-        }
-        self.email = email
-        emailIsValid = true
-    }
-    
-    func validatePassword(inputPassword: String) {
-        guard let password = Password(passwordString: inputPassword) else {
-            self.password = nil
-            return
-        }
-        self.password = password
+        
+        $inputEmail
+            .debounce(for: .seconds(0.7), scheduler: DispatchQueue.main)
+            .sink { email in
+                self.validateEmail(inputEmail: email)
+            }
+            .store(in: &subscriptions)
+        
+        $inputPassword
+            .debounce(for: .seconds(0.7), scheduler: DispatchQueue.main)
+            .sink { password in
+                self.validatePassword(inputPassword: password)
+            }
+            .store(in: &subscriptions)
     }
     
     func createUser(email: Email, password: Password) {
@@ -68,5 +66,23 @@ class LoginViewModel: ObservableObject {
                 print(error)
             }
         }
+    }
+    
+    private func validateEmail(inputEmail: String) {
+        guard let email = Email(emailString: inputEmail) else {
+            self.email = nil
+            emailIsValid = false
+            return
+        }
+        self.email = email
+        emailIsValid = true
+    }
+    
+    private func validatePassword(inputPassword: String) {
+        guard let password = Password(passwordString: inputPassword) else {
+            self.password = nil
+            return
+        }
+        self.password = password
     }
 }
