@@ -14,17 +14,17 @@ struct Login: View {
         VStack {
             Text(LocalizableString.login_title.rawValue)
             TextField(LocalizableString.login_email_input_title.rawValue, text: $viewModel.inputEmail)
-                .onChange(of: viewModel.inputEmail) { newValue in
-                    viewModel.validateEmail(inputEmail: newValue)
-                }
+                .textInputAutocapitalization(.never)
+                .autocorrectionDisabled(true)
+                .keyboardType(.emailAddress)
+
             if !viewModel.emailIsValid {
                 Text(LocalizableString.login_invalid_email_format_message.rawValue)
             }
                 
             TextField(LocalizableString.login_password_input_title.rawValue, text: $viewModel.inputPassword)
-                .onChange(of: viewModel.inputPassword) { newValue in
-                    viewModel.validatePassword(inputPassword: newValue)
-                }
+                .textInputAutocapitalization(.never)
+                .autocorrectionDisabled(true)
             
             if viewModel.email != nil && viewModel.password != nil {
                 
