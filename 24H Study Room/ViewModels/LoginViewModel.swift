@@ -13,6 +13,7 @@ class LoginViewModel: ObservableObject {
     @Published var inputEmail = ""
     @Published var inputPassword = ""
     @Published var emailIsValid = false
+    @Published var isShowingInputWarningMessage = false
     @Published var email: Email?
     @Published var password: Password?
     private var subscriptions = Set<AnyCancellable>()
@@ -21,16 +22,18 @@ class LoginViewModel: ObservableObject {
         self.fireAuthService = fireAuthService
         
         $inputEmail
-            .debounce(for: .seconds(0.7), scheduler: DispatchQueue.main)
+            .debounce(for: .seconds(0.6), scheduler: DispatchQueue.main)
             .sink { email in
                 self.validateEmail(inputEmail: email)
+                self.displayInputWarningMessage()
             }
             .store(in: &subscriptions)
         
         $inputPassword
-            .debounce(for: .seconds(0.7), scheduler: DispatchQueue.main)
+            .debounce(for: .seconds(0.6), scheduler: DispatchQueue.main)
             .sink { password in
                 self.validatePassword(inputPassword: password)
+                self.displayInputWarningMessage()
             }
             .store(in: &subscriptions)
     }
@@ -65,6 +68,16 @@ class LoginViewModel: ObservableObject {
             case .failure(let error):
                 print(error)
             }
+        }
+    }
+    
+    private func displayInputWarningMessage() {
+        if inputEmail.isEmpty || inputPassword.isEmpty {
+            self.isShowingInputWarningMessage = false
+        } else if email != nil && password != nil {
+            self.isShowingInputWarningMessage = false
+        } else {
+            self.isShowingInputWarningMessage = true
         }
     }
     

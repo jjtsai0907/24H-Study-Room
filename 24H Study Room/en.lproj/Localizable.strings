@@ -13,7 +13,7 @@
 
 /// Login
 "login_title" = "Log in";
-"login_invalid_email_format_message" = "Please enter correct email format";
+"login_invalid_email_format_message" = "Check if your email- and password FORMAT are correct";
 "login_email_input_title" = "Email";
 "login_password_input_title" = "Password";
 "login_signup_button_title" = "Sign up";

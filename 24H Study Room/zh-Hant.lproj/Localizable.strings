@@ -13,7 +13,7 @@
 
 /// Login
 "login_title" = "登入";
-"login_invalid_email_format_message" = "請輸入正確的電子信箱格式";
+"login_invalid_email_format_message" = "請檢查你的信箱及密碼格式是否正確";
 "login_email_input_title" = "電子信箱";
 "login_password_input_title" = "密碼";
 "login_signup_button_title" = "申請新帳號";
