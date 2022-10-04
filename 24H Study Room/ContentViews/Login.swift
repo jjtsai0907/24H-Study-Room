@@ -26,17 +26,17 @@ struct Login: View {
                 Text(LocalizableString.login_invalid_email_format_message.rawValue)
             }
             
-            if viewModel.email != nil && viewModel.password != nil {
+            if viewModel.isShowingLoginButtons {
                 
                 HStack {
                     Button {
-                        viewModel.login(email: viewModel.email!, password: viewModel.password!)
+                        viewModel.login()
                     } label: {
                         Text(LocalizableString.login_login_button_title.rawValue)
                     }
                     
                     Button {
-                        viewModel.createUser(email: viewModel.email!, password: viewModel.password!)
+                        viewModel.createUser()
                     } label: {
                         Text(LocalizableString.login_signup_button_title.rawValue)
                     }

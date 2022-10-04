@@ -14,6 +14,7 @@ class LoginViewModel: ObservableObject {
     @Published var inputPassword = ""
     @Published var emailIsValid = false
     @Published var isShowingInputWarningMessage = false
+    @Published var isShowingLoginButtons = false
     @Published var email: Email?
     @Published var password: Password?
     private var subscriptions = Set<AnyCancellable>()
@@ -26,6 +27,7 @@ class LoginViewModel: ObservableObject {
             .sink { email in
                 self.validateEmail(inputEmail: email)
                 self.displayInputWarningMessage()
+                self.displayLoginButtons()
             }
             .store(in: &subscriptions)
         
@@ -34,11 +36,16 @@ class LoginViewModel: ObservableObject {
             .sink { password in
                 self.validatePassword(inputPassword: password)
                 self.displayInputWarningMessage()
+                self.displayLoginButtons()
             }
             .store(in: &subscriptions)
     }
     
-    func createUser(email: Email, password: Password) {
+    func createUser() {
+        guard let email = self.email, let password = self.password else {
+            return
+        }
+        
         fireAuthService.createUser(email: email, password: password, completion: { result in
             switch result {
             case .success(let user):
@@ -49,7 +56,11 @@ class LoginViewModel: ObservableObject {
         })
     }
     
-    func login(email: Email, password: Password) {
+    func login() {
+        guard let email = self.email, let password = self.password else {
+            return
+        }
+        
         fireAuthService.login(email: email, password: password) { result in
             switch result {
             case .success(let user):
@@ -79,6 +90,13 @@ class LoginViewModel: ObservableObject {
         } else {
             self.isShowingInputWarningMessage = true
         }
+    }
+    
+    private func displayLoginButtons() {
+        guard email != nil, password != nil else {
+            return self.isShowingLoginButtons = false
+        }
+        return self.isShowingLoginButtons = true
     }
     
     private func validateEmail(inputEmail: String) {
