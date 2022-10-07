@@ -11,6 +11,6 @@ class ProfileViewModel: ObservableObject {
     private(set) var numberOfMeals = 1...10
     
     func clickUpgradeButton() {
-        print("Upgrade Button is clicked")
+        print("Upgrade button is clikced")
     }
 }

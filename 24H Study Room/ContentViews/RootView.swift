@@ -6,28 +6,11 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct RootView: View {
     var body: some View {
-        
-        NavigationView {
-            TabView {
-                SubjectMenu(viewModel: SubjectMenuViewModel())
-                    .tabItem {
-                        Label("Subjects", systemImage: "building.columns.fill")
-                    }
-                
-                Profile(viewModel: ProfileViewModel())
-                    .tabItem {
-                        Label("Me", systemImage: "person.fill")
-                    }
-                Friends(viewModel: FriendsViewModel())
-                    .tabItem {
-                        Label("Friends", systemImage: "figure.stand.line.dotted.figure.stand")
-                    }
-            }
-            .navigationTitle("24H Study Room")
-        }
+        Tabs()
     }
 }
 
