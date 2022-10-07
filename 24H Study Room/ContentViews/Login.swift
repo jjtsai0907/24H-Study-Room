@@ -14,29 +14,29 @@ struct Login: View {
         VStack {
             Text(LocalizableString.login_title.rawValue)
             TextField(LocalizableString.login_email_input_title.rawValue, text: $viewModel.inputEmail)
-                .onChange(of: viewModel.inputEmail) { newValue in
-                    viewModel.validateEmail(inputEmail: newValue)
-                }
-            if !viewModel.emailIsValid {
+                .textInputAutocapitalization(.never)
+                .autocorrectionDisabled(true)
+                .keyboardType(.emailAddress)
+            
+            TextField(LocalizableString.login_password_input_title.rawValue, text: $viewModel.inputPassword)
+                .textInputAutocapitalization(.never)
+                .autocorrectionDisabled(true)
+            
+            if viewModel.isShowingInputWarningMessage {
                 Text(LocalizableString.login_invalid_email_format_message.rawValue)
             }
-                
-            TextField(LocalizableString.login_password_input_title.rawValue, text: $viewModel.inputPassword)
-                .onChange(of: viewModel.inputPassword) { newValue in
-                    viewModel.validatePassword(inputPassword: newValue)
-                }
             
-            if viewModel.email != nil && viewModel.password != nil {
+            if viewModel.isShowingLoginButtons {
                 
                 HStack {
                     Button {
-                        viewModel.login(email: viewModel.email!, password: viewModel.password!)
+                        viewModel.login()
                     } label: {
                         Text(LocalizableString.login_login_button_title.rawValue)
                     }
                     
                     Button {
-                        viewModel.createUser(email: viewModel.email!, password: viewModel.password!)
+                        viewModel.createUser()
                     } label: {
                         Text(LocalizableString.login_signup_button_title.rawValue)
                     }
